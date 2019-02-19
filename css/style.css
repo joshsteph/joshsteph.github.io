@@ -45,12 +45,14 @@ body {
 footer {
 
 	background: #ff9802;
+    overflow: auto;
 
 }
 
 footer {
 	padding: 10% 0 1% 0;
     margin-top: 0;
+
 }
 
 
