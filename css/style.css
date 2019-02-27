@@ -1,7 +1,8 @@
 html,
 body,
 header,
-#intro {
+#intro,
+#pizzaMenu {
     height: 100%;
     width: 100%;
     -webkit-font-smoothing: antialiased;
@@ -45,14 +46,11 @@ body {
 footer {
 
 	background: #ff9802;
-    overflow: auto;
 
 }
 
 footer {
 	padding: 10% 0 1% 0;
-    margin-top: 0;
-
 }
 
 
@@ -85,8 +83,8 @@ a:visited {
 and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 40/71)
 {
 
-#intro_txt {
-	padding-top: 5%;
+#intro {
+	padding-top: 2%;
 }
 
 }

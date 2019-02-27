@@ -1,0 +1,159 @@
+<!DOCTYPE HTML>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Welcome to Pizza House</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="icon" href="img/favicon.png" type="image/png" sizes="32x32">
+</head>
+
+<body>
+	<main>
+		<div class="container">
+			<img src="img/logo.png" alt="" height="200px" width="200px">
+			<h1>Hungry Yet?</h1>
+			<p>Start your order now, click below for pickup or delivery:</p>
+			
+			<div class="row">
+				<div class="column order" id="pickup">
+					<img src="img/pickup.png" alt="" class="clickable">
+					<h3>Pickup</h3>
+				</div>
+
+				<div class="column order" id="delivery">
+					<img src="img/delivery.png" alt="" class="clickable">
+					<h3>Delivery</h3>
+				</div>
+			</div>	
+		</div>	
+	
+
+
+			<!--MODAL-->
+		<div id="modal">
+
+		  <!--MODAL CONTENT MENU-->
+		 <div class="menuWrapper">
+		 		<div onclick="clearAll()" class="close">+</div>
+		 		<img src="img/logo.png" alt="" height="150px" width="150px" class="menuLogo"> 
+
+			  <form class="menu" id="frMenu">
+			  		<fieldset>
+
+					  	<legend><h4>Size</h4></legend>
+					  	<input type="radio" class="size" name="size" value="Personal Pizza">Personal<br>
+					  	<input type="radio" class="size" name="size" value="Medium Pizza">Medium<br>
+					  	<input type="radio" class="size" name="size" value="Large Pizza" checked>Large<br>
+					  	<input type="radio" class="size" name="size" value="Extra Large Pizza">XLarge<br>
+
+					</fieldset>
+
+					<fieldset>
+			  	
+
+					  	<legend><h4>Crust</h4></legend>
+					  	<input type="radio" class="crust" name="crust" value="Plain Crust" checked>Plain<br>
+					  	<input type="radio" class="crust" name="crust" value="Garlic Butter Crust">Garlic Butter<br>
+					  	<input type="radio" class="crust" name="crust" value="Cheese Stuffed Crust"><div class="tooltip">Cheese Stuffed<span class="tooltiptext">+$3.00 Extra</span></div><br>
+					  	<input type="radio" class="crust" name="crust" value="Spicy Crust">Spicy<br>
+					  	<input type="radio" class="crust" name="crust" value="House Special Crust">House Special<br>
+
+				  	</fieldset>
+
+				  	<fieldset>
+
+					  	<legend><h4>Sauce</h4></legend>
+					  	<input type="radio" class="sauce" name="sauce" value="Marinara Sauce" checked>Marinara<br>
+					  	<input type="radio" class="sauce" name="sauce" value="White Sauce">White<br>
+					  	<input type="radio" class="sauce" name="sauce" value="BBQ Sauce">Barbeque<br>
+					  	<input type="radio" class="sauce" name="sauce" value="No Sauce">No Sauce<br>
+
+					</fieldset>
+
+					<fieldset>
+			   
+
+					  	<legend><h4>Cheese</h4></legend>
+					  	<input type="radio" class="cheese" name="cheese" value="Regular Cheese" checked>Regular<br>
+					  	<input type="radio" class="cheese" name="cheese" value="Extra Cheese"><div class="tooltip">Extra Cheese<span class="tooltiptext">+$3.00 Extra</span></div><br>
+					  	<input type="radio" class="cheese" name="cheese" value="No Cheese">No Cheese<br>
+			
+					</fieldset>
+
+					<fieldset>
+
+					  	<legend><h4>Meat</h4></legend>
+					  	<input type="checkbox" class="meat" name="meat" value="Pepperoni">Pepperoni<br>
+					  	<input type="checkbox" class="meat" name="meat" value="Sausage">Sausage<br>
+					  	<input type="checkbox" class="meat" name="meat" value="Canadian Bacon">Canadian Bacon<br>
+					  	<input type="checkbox" class="meat" name="meat" value="Ground Beef">Ground Beef<br>
+					  	<input type="checkbox" class="meat" name="meat" value="Anchovy">Anchovy<br>
+					  	<input type="checkbox" class="meat" name="meat" value="Chicken">Chicken<br>
+
+					 </fieldset>
+
+					 <fieldset>
+
+					  	<legend><h4>Veggies</h4></legend>
+					  	<input type="checkbox" class="veggies" name="veggies" value="Tomato">Tomato<br>
+					  	<input type="checkbox" class="veggies" name="veggies" value="Onion">Onion<br>
+					  	<input type="checkbox" class="veggies" name="veggies" value="Olive">Olive<br>
+					  	<input type="checkbox" class="veggies" name="veggies" value="Green Pepper">Green Pepper<br>
+					  	<input type="checkbox" class="veggies" name="veggies" value="Mushroom">Mushroom<br>
+					  	<input type="checkbox" class="veggies" name="veggies" value="Pineapple">Pineapple<br>
+					  	<input type="checkbox" class="veggies" name="veggies" value="Spinach">Spinach<br>
+					  	<input type="checkbox" class="veggies" name="veggies" value="Jalapeno">Jalapeno<br>
+					
+					 </fieldset>
+			  </form>
+
+			  <!--ACTION BUTTONS FOR ORDER-->
+
+			  <div class="controls">
+			  	<div class="button" onclick="getReceipt()">Place Order</div>
+			  	<div class="button" onclick="clearAll()">Cancel</div>
+			 </div> 
+
+			 <!--POP UP ORDER CART-->
+			 <div id="cart">
+			 	<img src="img/logo_transparent.png" alt="" class="logo" height="150px" width="150px">
+			 		<div id="youOrdered"><h3>You Ordered: </h3></div>
+				 	<div id="showText"></div>
+				 	<div id="showText2"></div>
+				 	<div id="total"><h3>Total:</h3></div>
+				 	<div id="totalPrice"></div>
+				 	<fieldset id="payment">
+				 		<legend>Payment Info</legend>
+					 	<label for="name">Full Name: </label>
+					 	<input id="name" type="text"><br>
+					 	<label for="phone">Phone Number: </label>
+					 	<input id="phone" type="text"><br>
+					 	<label for="creditcard-select">Credit Card: </label>
+							<select id="creditcard-select">
+							    <option value="visa">Visa</option>
+							    <option value="mastercard">MasterCard</option>
+							    <option value="discover">Discover</option>
+							</select><br>
+						
+						<input type="password" name="cc" placeholder="Credit Card Number"><br>
+							<div class= "process">
+							 	<button class="button">Submit</button>
+							 	<button class="button" onclick="clearAll()">Cancel</button>
+					 		</div>
+				 	</fieldset>
+			 </div>
+
+		  
+		</div>
+
+
+	</main>	
+
+<script src="js/scripts.js"></script>
+</body>
+
+</html>
