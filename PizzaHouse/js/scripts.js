@@ -21,7 +21,7 @@ document.querySelector(".close").addEventListener("click",
 
 function getReceipt() {
 	var text1 = "";
-	var text2 =""
+	var text2 ="";
 	var runningTotal = 0;
 	var sizeTotal = 0;
 	var sizeArray = document.getElementsByClassName("size");
