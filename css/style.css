@@ -15,6 +15,14 @@ body {
 	scroll-behavior: smooth;
 }
 
+#techlist {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(140px, 200px));
+    list-style: none;
+    padding: 0;
+    font-family: Futura,Trebuchet MS,Arial,sans-serif;
+    font-size: 1em;
+}
 .container-fluid {
     width: 100%;
     padding-right: 0px; 
@@ -22,6 +30,7 @@ body {
     margin-right: auto;
     margin-left: auto;
 }
+
 
 #intro {
     background: url(../img/laurelbg.jpg)no-repeat center center fixed;
@@ -33,13 +42,30 @@ body {
 
 #intro_img {
 
-	overflow:hidden; 
-	height:200; 
-	width:200; 
-	border-radius:50%;
+	overflow:hidden;
+    height: 400px; 
+}
+#intro_img2 {
+    display:none;
+    overflow:hidden;
 }
 
-#portfolio {
+#wrapper {
+    flex-wrap: wrap;
+}
+.about-content {
+    width: 60%;
+}
+.about-img {
+    min-width: 250px;
+    position: relative;
+    text-align: center;
+    padding-top: 8vw;
+    margin-left: -10vw;
+
+}
+
+#projects {
 	background-color: #f2f2f2;
 }
 
@@ -52,14 +78,15 @@ footer {
 
 footer {
 	padding: 10% 0 1% 0;
+    font-size: .8em;
+
 }
 
 
-
-#skills,
-#portfolio,
+#projects,
 #experience,
-#contact {
+#contact,
+#about {
 	padding:7% 0 7% 0;
 	
 }
@@ -77,6 +104,50 @@ a:visited {
 	color: #010101;
 }
 
+.card-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 1rem;
+}
+.project-card {
+    margin: 2vw 3vw;
+    border-top: 2px solid black;
+    position: relative;
+}
+.project-img {
+    width: 100%;
+
+}
+.project-desc {
+    padding: 2vw 0vw 2vw;
+    width: 100%;
+    display: inline-block;
+    height: 10vw;
+}
+.project-title {
+    padding: 2vw 0vw 2vw;
+    width: 100%;
+    display: inline-block;
+    height: 5vw;
+}
+.project-button {
+    width:40%;
+    display: inline-block;
+    flex-wrap: nowrap;
+    text-align: center;
+    border: 2px solid black;
+    background: transparent;
+    margin: 2vw 0.5vw 1vw;
+    cursor: pointer;
+}
+.project-button:hover {
+    border: 2px solid black;
+    background: orange;
+}
+.button-container {
+    text-align: left;
+}
+
 
 /*--MEDIA BREAKPOINT FOR IPHONE 5--*/
 
@@ -90,4 +161,36 @@ and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 40/71)
 
 }
 
+/* MEDIA BREAKPOINT FOR ABOUT IMG */
+
+@media only screen and (max-width: 992px) {
+    #intro_img {
+        display: none;
+    }
+    #intro_img2 {
+        display: block;
+        height: 260px;
+
+    }
+    .about-img {
+    min-width: 250px;
+    position: relative;
+    text-align: center;
+    padding-top: 8vw;
+    padding-left: 1.5vw;
+    margin-left: 0;
+
+}
+}
+@media only screen and (max-width: 767px) {
+    .about-content{
+        width: 100%;
+    }
+    .about-img {
+        padding: 2vw 0vw 0vw 0vw;
+        width: 100%;
+  
+    }
+
+}
 

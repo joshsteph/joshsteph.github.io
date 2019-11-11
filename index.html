@@ -33,22 +33,22 @@
         <a href="#intro" class= navbar-left><img src="./img/name.svg"></a>
 
         <!-- Collapse button -->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
-          aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navLinks"
+          aria-controls="navLinks" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
 
         <!-- Collapsible content -->
-        <div class="collapse navbar-collapse" id="basicExampleNav">
+        <div class="collapse navbar-collapse" id="navLinks">
 
           <!-- Links -->
-          <ul class="navbar-nav mr-auto smooth-scroll">
+          <ul class="navbar-nav smooth-scroll ml-md-auto d-none d-md-flex">
 
             <li class="nav-item">
-              <a class="nav-link" href="#skills">Skills</a>
+              <a class="nav-link" href="#about">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#portfolio">Portfolio</a>
+              <a class="nav-link" href="#projects">Projects</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#experience">Experience</a>
@@ -75,23 +75,21 @@
             <div class="row d-flex justify-content-center">
 
               <div class="col-md-7">
+                <div class="container">
+                    <!-- Heading -->
+                    <h2 class="display-4 font-weight-bold white-text pt-1 mb-2">Hi, I'm Josh <i class="fas fa-code orange-text"></i></h2>
+                    
 
-                    <img id= "intro_img" class="img-fluid p-1 mx-auto d-none d-sm-block" src="./img/josh.jpg" alt="" />
+                    <!-- Divider -->
+                    <hr class="hr-light">
 
-                <!-- Heading -->
-                <h2 class="display-4 font-weight-bold white-text pt-1 mb-2 text-center">I'm Josh <i class="fas fa-code orange-text"></i></h2>
-                
+                    <!-- Description -->
+                    <h4 class="white-text px-1 my-3">Software developer based in Portland, OR. Passionate about problem solving with data.</h4><br>
 
-                <!-- Divider -->
-                <hr class="hr-light">
-
-                <!-- Description -->
-                <h4 class="white-text px-1 my-3">Recent graduate of The Tech Academy's immersive 16 week full stack developer program. Experience with database design, front end, Python and MVC programming. Passionate about problem solving with data.</h4><br>
-
-                <div class="text-center">
-                <a role="button" class="btn btn-outline-orange" href="mailto:mail.joshstephens@gmail.com">Get in touch<i class="far fa-envelope ml-2"></i></a>
-                </div>
-
+                    <div class="text-center">
+                    <a role="button" class="btn btn-outline-orange" href="mailto:mail.joshstephens@gmail.com">Get in touch<i class="far fa-envelope ml-2"></i></a>
+                    </div>
+                  </div>
                </div> 
 
             </div>   
@@ -106,123 +104,128 @@
   <!--Main Navigation-->
 
     <!--Main layout-->
+    <!-- About Section -->
     <main>
         <div class="container-fluid" >
 
-            <!--Section: Skills-->
-            <section id="skills" class="text-center container">
+            <section id="about" class="container-fluid">
+              <div class="container d-flex" id="wrapper">
+                  
+                    <div class="about-content">
+                      <h2 class="display-4 font-weight-bold mb-5">About</h2>
+                      <!--<p>Originally from Tennessee, I grew up 20 minutes outside Knoxville in the foothills of the Smoky Mountain National Park. Yes, the same town as Dolly Parton's Dollywood. My love of music led me to call Nashville home soon after college. That's where I spent the last 7 years working for a data storage company helping businesses maintain the security and reliability of their data.</p>--><p> I recently traded Appalachia for Cascadia where I began a career transition into software development with a full stack developer bootcamp at The Tech Academy as well as self-paced courses with Udemy and edX. The most rewarding work for me is collaborating with a team and fine tuning every detail keeping the big picture in focus. Currently looking for a role with an employee driven company that encourages growth with continued learning opportunities.</p><p>Outside of tech, I spend time exploring the PNW with my wife and our lab/pointer mix, playing music, and supporting the local music scene.</p>
+                      <p>Technologies and Skills:</p>
+                    
+                        <ul id="techlist">
+                          <li>HTML5</li>
+                          <li>JavaScript</li>
+                          <li>SQL & SQL Server 2017</li>
+                          <li>Python</li>
+                          <li>Pandas & NumPy</li>
+                          <li>Tableau</li>
+                          <li>Django</li>
+                          <li>Git</li>
+                          <li>Account Management</li>
+                          <li>Vendor Relations</li>
+                         </ul>
 
-                <!-- Heading -->
-                <h2 class="mb-5 font-weight-bold">Skills</h2>
-
-                <!--Grid row-->
-                <div class="row">
-
-                    <!--Grid column-->
-                    <div class="col-md-4 mb-5">
-                        <i class="fas fa-laptop-code fa-4x orange-text"></i>
-                        <h4 class="my-3 font-weight-bold">Front End</h4>
-                        <p class="grey-text">HTML5, CSS, JS, Bootstrap</p>
-                    </div>
-                    <!--Grid column-->
-
-                    <!--Grid column-->                    
-                    <div class="col-md-4 mb-5">
-                        <i class="devicon-python-plain fa-4x orange-text"></i>
-                        <h4 class="my-3 font-weight-bold">Python 3</h4>
-                        <p class="grey-text"></p>
-                    </div>
-                    <!--Grid column-->
-
-                    <!--Grid column-->
-                    <div class="col-md-4 mb-5">
-                        <i class="fas fa-database  fa-4x orange-text"></i>
-                        <h4 class="my-3 font-weight-bold">Database</h4>
-                        <p class="grey-text">SQL Server 2017</p>
-                    </div>
-                    <!--Grid column-->
-
-                    <!--Grid column-->
-                    <div class="col-md-4 mb-5">
-                        <i class="fab fa-github fa-4x orange-text"></i>
-                        <h4 class="my-3 font-weight-bold">GitHub</h4>
-                        <p class="grey-text"></p>
-                    </div>
-                    <!--Grid column-->
-
-                    <!--Grid column-->
-                    <div class="col-md-4 mb-5">
-                        <i class="fas fa-project-diagram fa-4x orange-text"></i>
-                        <h4 class="my-3 font-weight-bold">Project Management</h4>
-                        <p class="grey-text"></p>
-                    </div>
-                    <!--Grid column-->
-
-                    <!--Grid column-->
-                    <div class="col-md-4 mb-5">
-                        <i class="far fa-id-badge fa-4x orange-text"></i>
-                        <h4 class="my-3 font-weight-bold">IT Sales</h4>
-                        <p class="grey-text">Account Management, CRM, Communication, Vendor Relations, Contracts</p>
-                    </div>
-                    <!--Grid column-->
-
-                </div>
-                <!--Grid row-->
+                         
+                     </div>      
+                    <div class="about-img">
+                      <img id= "intro_img" class="img-fluid" src="./img/josh_chart.png" alt="" />
+                      <img id= "intro_img2" class="img-fluid" src="./img/josh.png" alt="" />
+                    </div>  
+                  
+                </div>  
+            </section>  
 
 
-
-            </section>
-            <!--Section: Skills-->
-
-
-            <!--Section: Portfolio-->
+            <!--Section: Projects-->
             
-            <section id="portfolio" class="text-center">
+            <section id="projects">
 
-              <div class="container mb-5">
-                <!-- Heading -->
-                <h2 class="mb-5 font-weight-bold">Portfolio</h2>
-
-                    <!--Grid column-->
-                <div class="card-deck">
-                  <div class="card">
-                    <a href="menu_project.html"><img class="card-img-top" src="./img/PizzaHouseProject.png" alt="Card image cap"></a>
-                    <div class="card-body">
-                      <h5 class="card-title">HTML/CSS/JS</h5>
-                      <p class="card-text">Designed and built a mock pizza ordering tool with HTML5, CSS and JavaScript.</p>
-                       <a href="https://github.com/joshsteph/The-Tech-Academy-JavaScript-Projects/tree/master/PizzaHouse" target="_blank"><i class="fab fa-github" aria-hidden="false"></i> View on GitHub</a>
+              <div class="container">
+                <h2 class="mb-5 font-weight-bold text-center">Recent Projects</h2>
+                  <div class="card-box">
+                    <div class="project-card">
+                      <span class="project-title"><h5>Web Audio Pedalboard</h5></span>
+                        <div class="img-container">
+                          <img src="./img/wa_project_img/wa_screenshot.png" class="project-img" alt=""/>
+                        </div>
+                          <div class="project-desc">Interactive Demo of a guitar effects pedalboard using a simple HTML interface and the popular howler.js library to manage audio.</div>
+                          
+                            <div class="button-container">
+                              <span class="project-button" id="wa-demo"><a href="PedalsDemo/demo_index.html" target="_blank">Live Demo</a></span>
+                              <span class="project-button" id=""><a href="" target="_blank">GitHub</a></span>
+                           </div>
                     </div>
-                  </div>
-                  <div class="card">
-                    <a href="db_project.html"><img class="card-img-top" src="./img/db_laptop.jpg" alt="Card image cap"></a>
-                    <div class="card-body">
-                      <h5 class="card-title">db_Library</h5>
-                      <p class="card-text">Used SQL Server 2017 to design a relational database and stored procedures.</p>
-                      <a href="https://github.com/joshsteph/The-Tech-Academy-SQL-Coding-Projects/blob/master/library_Query.sql" target="_blank"><i class="fab fa-github" aria-hidden="false"></i> View on GitHub</a>
+                      <div class="project-card">
+                      <span class="project-title"><h5>PDX Crime Data Dashboard</h5></span>
+                        <div class="img-container">
+                          <img src="./img/dashboard.png" class="project-img" alt=""/>
+                        </div>
+                          <div class="project-desc">Tableau dashboard using crime stats from Open Data as well as GIS info for mapping visualizations.</div>
+                            <div class="button-container">
+                              <span class="project-button" id="wa-demo"><a href="PedalsDemo/demo_index.html" target="_blank">Workbook</a></span>
+                              <span class="project-button" id=""><a href="" target="_blank">GitHub</a></span>
+                           </div>
                     </div>
-                  </div>
-                  <div class="card">
-                    <a href="prosperIT.html"><img class="card-img-top" src="./img/prosperITscreenshot.png" alt="Card image cap"></a>
-                    <div class="card-body">
-                      <h5 class="card-title">Prosper IT Social Media App</h5>
-                      <p class="card-text">Worked with a team of developers to add several features to a Django based website.</p>
-                      <a href="https://github.com/joshsteph/JobPlacementDashboard/blob/master/README.md" target="_blank"><i class="fab fa-github" aria-hidden="false"></i> View on GitHub</a>
+                      <div class="project-card">
+                      <span class="project-title"><h5>Climate Data Exploration</h5></span>
+                        <div class="img-container">
+                          <img src="./img/climate.png" class="project-img" alt=""/>
+                        </div>
+                          <div class="project-desc">Pandas exploration of climate data from 1900 - 2013. Check out the report or view the public Tableau workbook.</div>
+                            <div class="button-container">
+                              <span class="project-button" id="wa-demo"><a href="PedalsDemo/demo_index.html" target="_blank">Workbook</a></span>
+                              <span class="project-button" id=""><a href="" target="_blank">GitHub</a></span>
+                           </div>
                     </div>
-                </div>
-              </div>
-
+                      <div class="project-card">
+                      <span class="project-title"><h5>Library Database</h5></span>
+                        <div class="img-container">
+                          <img src="./img/db_laptop_orange.jpg" class="project-img" alt=""/>
+                        </div>
+                          <div class="project-desc">Datbase project using SQL Server 2017 with stored procedures for inventory management.</div>
+                            <div class="button-container">
+                              <span class="project-button" id=""><a href="" target="_blank">GitHub</a></span>
+                           </div>
+                    </div>
+                      <div class="project-card">
+                      <span class="project-title"><h5>Restaurant Menu System</h5></span>
+                        <div class="img-container">
+                          <img src="./img/PizzaHouseProject.png" class="project-img" alt=""/>
+                        </div>
+                          <div class="project-desc">Simple HTML and JavaScript project for a functional ordering tool.</div>
+                            <div class="button-container">
+                              <span class="project-button" id="wa-demo"><a href="PedalsDemo/demo_index.html" target="_blank">Live Demo</a></span>
+                              <span class="project-button" id=""><a href="" target="_blank">GitHub</a></span>
+                           </div>
+                    </div>
+                      <div class="project-card">
+                      <span class="project-title"><h5>Web Scraper</h5></span>
+                        <div class="img-container">
+                          <img src="./img/prosperITscreenshot.png" class="project-img" alt=""/>
+                        </div>
+                          <div class="project-desc">Django project as part of ProsperIT and Tech Academy collab. Web Scraper feature allows user to search local classifieds from app.</div>
+                            <div class="button-container">
+                              <span class="project-button" id=""><a href="" target="_blank">GitHub</a></span>
+                           </div>
+                    </div>
+                  </div>  
+                  </div> 
             </section>
-            <!--Section: Portfolio-->
+        
 
             <!--Section: Experience-->
             <section id="experience" class="container">
                 <!-- Heading -->
-                <h2 class="mb-5 font-weight-bold text-center">Experience</h2>
+                <h2 class="mb-5 font-weight-bold text-center">Work Experience</h2>
 
                   <div class="media">
                     <img class="align-self-start mr-3" src="./img/prosperit.png" alt="">
                     <div class="media-body">
-                      <h5 class="mt-0 font-weight-bold">2019 Software Developer</h5>
+                      <h5 class="mt-0 font-weight-bold">2019 Software Developer Cohort</h5>
                       <p> Developed multiple user-interfaces within Django framework for a social media app. Employed web-automation features to simplify user experience. Responsible for dashboard redesign and front-end continuity fixes. 
                     </div>
                   </div>
@@ -255,6 +258,9 @@
                   <p>
                   <a href="https://www.github.com/joshsteph" target="_blank"><i class="fab fa-github" aria-hidden="false"></i> GitHub</a>      
                   </p>
+                  <p>
+                  <a href="https://www.instagram.com/joshrstephens/" target="_blank"><i class="fab fa-instagram" aria-hidden="True"></i> Instagram</a>      
+                  </p>                  
                   <p>
                     <i class="fas fa-home  mr-1"></i>Portland, OR 97232</p>
                   <p>
