@@ -60,9 +60,9 @@ document.getElementById('pause').onclick= function(){
 
 document.getElementById('cleanbtn').onclick= function(){
   clearPlaying();
-  showPause();
   howls[files[0]].seek(time);
   howls[files[0]].play();
+  showPause();
   showPedal('pedals1');
   showDesc('clean-desc');
 };
