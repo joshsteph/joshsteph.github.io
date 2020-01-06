@@ -7,6 +7,7 @@ for (var i=0; i<files.length; i++) {
         src: ['audio/'+ files[i] + '.mp3'],
         volume: 0.5,
         loop: true,
+        html5: true,
     });
 };
 
